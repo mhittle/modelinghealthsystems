@@ -1,4 +1,4 @@
-# modelinghealthsystems
+# Modeling Public Health and Healthcare Systems
 
 This site links to code used in the book:
 Basu, Sanjay. Modeling Public Health and Healthcare Systems. New York: Oxford University Press, 2017.

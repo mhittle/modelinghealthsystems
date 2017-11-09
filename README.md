@@ -7,4 +7,5 @@ The book aims to empower readers to learn and apply engineering, operations rese
 
 All materials are subject to copyright, (c) Oxford University Press, 2017.
 
-Correction to the first edition: There is a typo in Chapter 10. Please use this version of chapter 10 uploaded above, which has a new version of Figure 10.6
+# Correction to the first edition: 
+There is a typo in Chapter 10. Please use the version of chapter 10 uploaded above, which has an update of section 10.2 and a new version of Figure 10.6

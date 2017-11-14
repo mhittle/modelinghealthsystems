@@ -1,7 +1,7 @@
-p = 0.0002
-c = c(5,1)
-w = matrix(c(.6,.4,.1,.9),ncol=2,byrow=TRUE)
+p = 0.00015
+c = c(1,5)
 v = 2
+w = matrix(c(.6,.4,.1,.9),ncol=2,byrow=TRUE)
 
 time = 10
 dt = 0.01
@@ -23,7 +23,7 @@ Numinf = sum(I)
 for (i in 1:(time/dt)){
   for (sex in 1:2){
     for (group in 1:2){
-      beta[sex,group] = p*c[group]*(w[sex,1]*I[3-sex,1]+w[sex,2]*I[3-sex,2])
+      beta[sex,group] = p*c[group]*(w[group,1]*I[3-sex,1]+w[group,2]*I[3-sex,2])
       S[sex,group] = S[sex,group] - beta[sex,group]*S[sex,group]*dt  + v*I[sex,group]*dt
       I[sex,group] = I[sex,group] + beta[sex,group]*S[sex,group]*dt - v*I[sex,group]*dt
     }

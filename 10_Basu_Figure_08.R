@@ -1,5 +1,5 @@
 mu = c(.015,12)
-beta = 0.00003
+beta = 0.0003
 kappa = c(1/5, 10)
 v = 2
 
@@ -32,8 +32,8 @@ for (i in 1:time){
   }
 }
 
-plot(Shvec+1000,lty=1,type="l",xlab="time steps",ylab="Pop",ylim=c(0,100000))
+plot(Shvec,lty=1,type="l",xlab="time steps",ylab="Pop",ylim=c(0,1000000))
 lines(Ihvec,lty=2)
 lines(Smvec,lty=3)
 lines(Imvec,lty=4)
-legend(7000,100000,c("Sh","Ih","Sm","Im"),lty=c(1,2,3,4))
+legend(7000,1000000,c("Sh","Ih","Sm","Im"),lty=c(1,2,3,4)) 

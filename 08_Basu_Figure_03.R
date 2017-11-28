@@ -49,7 +49,7 @@ spec1
 spec2
 spec3
 
-install.packages('Epi')
-library(Epi)
-ROC(survey1pos,dm)
+install.packages('pROC')
+library(pROC)
+plot(roc(as.numeric(dm),as.numeric(survey1pos)))
 

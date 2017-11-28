@@ -1,8 +1,7 @@
 mu = c(.015,12)
-beta = 0.0003
+beta = 0.00003
 kappa = c(1/5, 10)
 v = 2
-alpha = 50
 
 time = 1
 dt = 0.0001
@@ -24,7 +23,7 @@ for (i in 1:time){
     Nm = Sm+Im
     Sh = Sh + mu[1]*Nh*dt + v*Ih*dt - beta*Im*Sh*dt - mu[1]*Sh*dt
     Ih = Ih + beta*Im*Sh*dt - v*Ih*dt- kappa[1]*Ih*dt - mu[1]*Ih*dt
-    Sm = Sh + alpha*Nm*dt - beta*Ih*Sm*dt - mu[2]*Sm*dt
+    Sm = Sm + mu[2]*Nm*dt - beta*Ih*Sm*dt - mu[2]*Sm*dt
     Im = Im + beta*Ih*Sm*dt - kappa[2]*Ih*dt - mu[2]*Im*dt
     Shvec = c(Shvec,Sh)
     Ihvec = c(Ihvec,Ih)
@@ -33,8 +32,8 @@ for (i in 1:time){
   }
 }
 
-plot(Shvec,col="blue",type="l",xlab="time steps",ylab="Pop",ylim=c(0,100000))
-lines(Ihvec,col="purple")
-lines(Smvec,col="red")
-lines(Imvec,col="green")
-legend(7000,100000,c("Sh","Ih","Sm","Im"),lty=c(1,1,1,1),col=c("blue","purple","red","green"))
+plot(Shvec+1000,lty=1,type="l",xlab="time steps",ylab="Pop",ylim=c(0,100000))
+lines(Ihvec,lty=2)
+lines(Smvec,lty=3)
+lines(Imvec,lty=4)
+legend(7000,100000,c("Sh","Ih","Sm","Im"),lty=c(1,2,3,4))

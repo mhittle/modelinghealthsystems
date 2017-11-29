@@ -24,7 +24,7 @@ for (i in 1:time){
     Sh = Sh + mu[1]*Nh*dt + v*Ih*dt - beta*Im*Sh*dt - mu[1]*Sh*dt
     Ih = Ih + beta*Im*Sh*dt - v*Ih*dt- kappa[1]*Ih*dt - mu[1]*Ih*dt
     Sm = Sm + mu[2]*Nm*dt - beta*Ih*Sm*dt - mu[2]*Sm*dt
-    Im = Im + beta*Ih*Sm*dt - kappa[2]*Ih*dt - mu[2]*Im*dt
+    Im = Im + beta*Ih*Sm*dt - kappa[2]*Im*dt - mu[2]*Im*dt
     Shvec = c(Shvec,Sh)
     Ihvec = c(Ihvec,Ih)
     Smvec = c(Smvec,Sm)

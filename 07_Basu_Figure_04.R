@@ -14,6 +14,9 @@ years[(years>5)&(years<10)]
 testmatrix = matrix(c(0.995,0.15,0.02,0.005,0.826,0.04,0,0.024,0.94),ncol=3,byrow=TRUE)
 
 # markov model of cocaine epidemic in los angeles
+# This example and associated code is generously open-sourced by
+# the RAND Corporation for teaching purposes
+# see: https://www.rand.org/pubs/reprints/RP545.html
 transition = matrix(c(0.995,0.15,0.02,0.005,0.826,0.04,0,0.024,0.94),ncol=3,byrow=TRUE)
 timesteps = 120
 pnon = rep(0,timesteps)
